@@ -13,8 +13,8 @@ if (!databaseUri) {
 var pushConfig = {};
 
 if (process.env.GCM_SENDER_ID && process.env.GCM_API_KEY) {
-    pushConfig['android'] = { senderId: process.env.GCM_SENDER_ID || '',
-                              apiKey: process.env.GCM_API_KEY || ''};
+    pushConfig['android'] = { senderId: '247681936558' || '',
+                              apiKey: 'AIzaSyCY3wzN9yAm-x9lIm_vR9LKrWjpPbmXo_M' || ''};
 }
 
 var filesAdapter = null;  // enable Gridstore to be the default
@@ -35,7 +35,7 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   push: pushConfig,
   filesAdapter: filesAdapter,
-  serverURL: process.env.SERVER_URL || 'http://immense-bayou-32783.herokuapp.com/parse'  // needed for Parse Cloud and push notifications
+  serverURL: 'http://immense-bayou-32783.herokuapp.com/parse' || 'http://immense-bayou-32783.herokuapp.com/parse'  // needed for Parse Cloud and push notifications
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
